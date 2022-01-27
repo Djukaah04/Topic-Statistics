@@ -1,11 +1,32 @@
+@import '../../styles/variables';
+@import '../../styles/base';
+
 :host {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80%;
-  overflow: scroll;
+  height: 90vh;
+  padding: $spacing-sm;
+
+  * {
+    font-weight: bold;
+    color: $color-dark;
+  }
 }
 
 .topic-cloud {
-  width: 50%;
+  position: relative;
+  flex-grow: 1;
+  border: 1px solid transparent;
+  height: 100%;
+}
+
+.topic-label {
+  position: absolute;
+  border: 2px solid transparent;
+  width: fit-content;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

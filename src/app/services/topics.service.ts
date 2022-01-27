@@ -4,12 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TopicsService {
-  // topics: [] = [];
-
   constructor() {
     this.getTopics();
   }
 
+  // Returns our topics data
   getTopics() {
     return fetch('assets/topics.json')
       .then(response => response.json())

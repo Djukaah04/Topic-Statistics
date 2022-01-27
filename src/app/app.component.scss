@@ -1,11 +1,27 @@
+@import './styles/variables';
+
 :host {
-  display: block;
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  // border: 5px solid red;
+
+  * {
+    font-family: cursive, 'Ariel', 'sans-serif';
+  }
 }
 
-.title {
-  font-family: cursive, 'Ariel', 'sans-serif';
+.app-intro {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.app-intro__title {
   margin: 0;
-  padding: 20px;
+  padding: 0 $spacing-md;
+}
+
+.app-intro__additional-info {
+  font-size: $topic-info-font-size;
+  margin-top: 6px;
 }

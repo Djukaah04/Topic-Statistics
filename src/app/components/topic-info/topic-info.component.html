@@ -1,5 +1,19 @@
-<h2>Information on topic "-----":</h2>
-<p>Total Mentions: --</p>
-<p>Positive Mentions: <span class='color-green'>number</span></p>
-<p>Neutral Mentions: <span class='color-grey'>number</span></p>
-<p>Negative Mentions: <span class='color-red'>number</span></p>
+<div *ngIf='topic.label' class='topic-info-container'>
+  <h2 class='topic-info-intro'>Information on topic "{{ topic.label }}":</h2>
+  <p class='total-mentions'>Total Mentions: {{ topic.volume }}</p>
+  <p class='sentiment'>Positive Mentions:
+    <span class='color-green'>
+      {{ topic.sentiment.positive ? topic.sentiment.positive : 0 }}
+    </span>
+  </p>
+  <p class='sentiment'>Neutral Mentions:
+    <span class='color-blue'>
+      {{ topic.sentiment.neutral ? topic.sentiment.neutral : 0 }}
+    </span>
+  </p>
+  <p class='sentiment'>Negative Mentions:
+    <span class='color-red'>
+      {{ topic.sentiment.negative ? topic.sentiment.negative : 0 }}
+    </span>
+  </p>
+</div>

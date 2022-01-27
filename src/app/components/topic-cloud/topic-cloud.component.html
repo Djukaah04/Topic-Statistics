@@ -5,9 +5,10 @@
   appTopicStyle
   *ngFor='let topic of topics'
   [topic]='topic'
-  (click)='showTopicInfo()'
+  (click)='showTopicInfo(topic)'
+  class='topic-label'
   >
-    {{ topic.label }}
+    {{ topic.label }} {{ topic.level }}
   </p>
 </div>
-<app-topic-info></app-topic-info>
+<app-topic-info [topic]='selectedTopic'></app-topic-info>
